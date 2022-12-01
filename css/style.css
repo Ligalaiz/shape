@@ -1,0 +1,63 @@
+body {
+  background-color: #3f3434;
+}
+
+.shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  margin-top: 50px;
+}
+.shape__triangle {
+  width: 0;
+  height: 0;
+  border-left: 173.2px solid transparent;
+  border-top: 100px solid transparent;
+  border-right: 173.2px solid green;
+  border-bottom: 100px solid transparent;
+  -webkit-animation: 14s linear infinite rotate-forward;
+          animation: 14s linear infinite rotate-forward;
+  transform-origin: 288px;
+}
+.shape__square {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  -webkit-animation: 13s linear infinite rotate-backward;
+          animation: 13s linear infinite rotate-backward;
+}
+
+@-webkit-keyframes rotate-forward {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-forward {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-backward {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotate-backward {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
